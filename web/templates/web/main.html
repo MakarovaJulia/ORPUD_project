@@ -5,6 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-<p>Hello</p>
+    <p>Hello</p>
+    {% if not user.is_anonymous %}
+    <b>Вы авторизованы как {{ user.username }}</b>
+    {% endif %}
 </body>
 </html>
